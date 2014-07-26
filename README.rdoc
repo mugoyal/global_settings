@@ -5,24 +5,14 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version 2.1.1
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+* Rails version 4.0.3
 
 * ...
 
+Information:
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Created a model having three fields "name", "setting_type" and "value". "Value" field is storing every type of settings as a string. Then, I overridden the value method which is returning the value according to the "setting_type" saved. So, every setting object will have value as per it's data-type wherever we use in the app. Included unit tests for the model.
+
+Rails 4 by default provides caching on model. It means whenever we query to database it stores the result in cache and return same next time we query  for same.
