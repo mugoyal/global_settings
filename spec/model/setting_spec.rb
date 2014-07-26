@@ -9,13 +9,29 @@ describe Setting do
   end
 
   it "should store data type correctly" do
-    new_setting = FactoryGirl.create(:setting, setting_type: "boolean")
-    new_setting.setting_type.should == "boolean"
+    new_setting = FactoryGirl.create(:setting, setting_type: "boolean", value: "true")
+    new_setting.setting_type.should eq "boolean"
   end
 
-  it "should return correct value according to data type" do
+  it "should return boolean value" do
     new_setting = FactoryGirl.create(:setting, setting_type: "boolean", value: "true")
-    eval(new_setting.value).should be true
+    new_setting.value.should be true
+    new_setting.value.should eq true
+  end
+
+  it "should return string value" do
+    new_setting = FactoryGirl.create(:setting, setting_type: "string", value: "123")
+    new_setting.value.should eq "123"
+  end
+  
+  it "should return integer value" do
+    new_setting = FactoryGirl.create(:setting, setting_type: "integer", value: "1234")
+    new_setting.value.should eq 1234
+  end
+  
+  it "should return float value" do
+    new_setting = FactoryGirl.create(:setting, setting_type: "float", value: "12.234")
+    new_setting.value.should eq 12.234
   end
 
 end
