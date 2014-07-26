@@ -14,7 +14,7 @@ class SettingsController < ApplicationController
   end
   
   def destroy
-    tweet = Setting.delete params[:id]
+    setting = Setting.delete params[:id]
     redirect_to :back
   end
   

@@ -34,4 +34,10 @@ describe Setting do
     new_setting.value.should eq 12.234
   end
 
+  it "should setup value on class level" do
+    Setting.test = 12
+    Setting.test.should eq 12
+    Setting.find_by_name("test").delete
+  end
+
 end
