@@ -1,17 +1,5 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version 2.1.1
-
-* Rails version 4.0.3
-
-* ...
-
-Information:
 
 Created a model having three fields "name", "setting_type" and "value". "Value" field is storing every type of settings as a string. Then, I overridden the value method which is returning the value according to the "setting_type" saved. So, every setting object will have value as per it's data-type wherever we use in the app. Included unit tests for the model.
 

@@ -5,7 +5,11 @@ GlobalSettings::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'settings#index'
 
-  resources :settings
+  resources :settings do
+    collection do
+      get :usage
+    end
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
