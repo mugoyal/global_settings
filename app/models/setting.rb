@@ -1,4 +1,6 @@
 class Setting < ActiveRecord::Base
+  validates_presence_of :name
+  
   
   def value
     if self.setting_type == "integer"
