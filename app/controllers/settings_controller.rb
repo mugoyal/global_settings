@@ -21,7 +21,7 @@ class SettingsController < ApplicationController
   private
   
   def setting_params
-    params.required(:setting).permit(:name, :setting_type, :value)
+    params.required(:setting).permit(:name, :setting_type, :value, :env)
   end
   
 end

@@ -17,6 +17,7 @@
               <th class="text-center">Name</th>
               <th class="text-center">Type</th>
               <th class="text-center">Value</th>
+              <th class="text-center">Environment</th>
               <th class="text-center">Action</th>
           </tr>
       </thead>
@@ -26,6 +27,7 @@
               <td><%= setting.name %></td>
               <td><%= setting.setting_type %></td>
               <td><%= setting.value %></td>
+              <td><%= setting.env %></td>
               <td><%= link_to "Delete", setting, method: "DELETE", class: "btn btn-small btn-danger" %></td>
           </tr>
         <% end %>

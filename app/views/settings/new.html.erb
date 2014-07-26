@@ -13,6 +13,11 @@
              <%= f.text_field :name, autofocus: true, placeholder: "Enter setting name", class: "form-control", required: "true" %>
         </div>
         <div class="span12">
+             <%= f.label :env, "Environment"%>
+             <% available_envs = ["development", "staging", "production"]%>
+             <%= f.select :env, options_for_select(available_envs.collect{|t| [ t.titleize, t] }), :class => 'form-control' %>
+        </div>
+        <div class="span12">
              <%= f.label :setting_type, "Setting Type"%>
              <% available_types = ["string", "integer", "float", "boolean"]%>
              <%= f.select :setting_type, options_for_select(available_types.collect{|t| [ t.titleize, t] }), :class => 'form-control' %>
